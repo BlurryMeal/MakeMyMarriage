@@ -94,7 +94,7 @@ const ServicesTab = ({ services: initialServices }: { services: Service[] }) => 
     toast({ title: "Success", description: "Service added successfully" });
 
     try {
-      const response = await fetch('http://tramway.proxy.rlwy.net:57255/api/register-service', {
+      const response = await fetch('http://tramway.proxy.rlwy.net/api/register-service', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

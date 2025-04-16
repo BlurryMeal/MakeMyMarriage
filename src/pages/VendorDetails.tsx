@@ -31,7 +31,7 @@ const VendorDetails = () => {
 
   useEffect(() => {
     if (!id) return;
-    fetch(`http://tramway.proxy.rlwy.net:57255/api/vendors/${id}`)
+    fetch(`http://tramway.proxy.rlwy.net/api/vendors/${id}`)
       .then(res => res.json())
       .then(data => {
         setVendorDetails(data);

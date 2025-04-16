@@ -28,7 +28,7 @@ useEffect(() => {
   const vendor = JSON.parse(localStorage.getItem('loggedInUser') || '{}');
   if (!vendor?.id) return;
 
-  fetch(`http://tramway.proxy.rlwy.net:57255/api/vendor-bookings/${vendor.id}`)
+  fetch(`http://tramway.proxy.rlwy.net/api/vendor-bookings/${vendor.id}`)
     .then(res => res.json())
     .then(data => {
       if (Array.isArray(data)) {
@@ -387,7 +387,7 @@ useEffect(() => {
   className="bg-wedding-red hover:bg-wedding-red/90"
   onClick={async () => {
     try {
-      const res = await fetch(`http://tramway.proxy.rlwy.net:57255/api/bookings/${selectedBooking?.id}`, {
+      const res = await fetch(`http://tramway.proxy.rlwy.net/api/bookings/${selectedBooking?.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status: selectedBooking?.status }),

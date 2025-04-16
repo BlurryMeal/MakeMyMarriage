@@ -17,7 +17,7 @@ const SignIn = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch('http://tramway.proxy.rlwy.net:57255/api/login', {
+      const response = await fetch('http://tramway.proxy.rlwy.net/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -86,7 +86,7 @@ const AdminDashboard = () => {
 
   useEffect(() => {
   if (activeTab === 'vendors') {
-    fetch('http://tramway.proxy.rlwy.net:57255/api/admin/vendors')
+    fetch('http://tramway.proxy.rlwy.net/api/admin/vendors')
       .then(res => res.json())
       .then(data => setVendorServices(data))
       .catch(err => console.error('Failed to fetch vendors:', err));
@@ -96,7 +96,7 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     if (activeTab === 'clients') {
-      fetch('http://tramway.proxy.rlwy.net:57255/api/clients')
+      fetch('http://tramway.proxy.rlwy.net/api/clients')
         .then(res => res.json())
         .then(data => setAllClients(data))
         .catch(err => console.error('Failed to fetch clients:', err));
@@ -106,7 +106,7 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     if (activeTab === 'bookings') {
-      fetch('http://tramway.proxy.rlwy.net:57255/api/bookings')
+      fetch('http://tramway.proxy.rlwy.net/api/bookings')
         .then(res => res.json())
         .then(data => {
           setAllBookings(data);
@@ -117,7 +117,7 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     if (activeTab === 'messages') {
-      fetch('http://tramway.proxy.rlwy.net:57255/api/messages')
+      fetch('http://tramway.proxy.rlwy.net/api/messages')
         .then(res => res.json())
         .then(data => setContactMessages(data))
         .catch(err => console.error('Failed to fetch messages:', err));

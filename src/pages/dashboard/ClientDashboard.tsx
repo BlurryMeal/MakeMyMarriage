@@ -149,7 +149,7 @@ const [showDeleteModal, setShowDeleteModal] = useState(false);
   }, []);
 
   useEffect(() => {
-    fetch('http://tramway.proxy.rlwy.net:57255/api/vendor-listings')
+    fetch('http://tramway.proxy.rlwy.net/api/vendor-listings')
       .then(res => res.json())
       .then(data => setVendors(data))
       .catch(err => console.error('Error fetching vendors:', err));
@@ -272,7 +272,7 @@ const [showDeleteModal, setShowDeleteModal] = useState(false);
   
     const { id } = JSON.parse(storedUser);
   
-    fetch(`http://tramway.proxy.rlwy.net:57255/api/user/${id}`)
+    fetch(`http://tramway.proxy.rlwy.net/api/user/${id}`)
       .then(res => res.json())
       .then(data => {
         if (data && data.UserID) {
@@ -820,7 +820,7 @@ const [showDeleteModal, setShowDeleteModal] = useState(false);
                 if (isEditing) {
                   // Save changes
                   try {
-                    const res = await fetch(`http://tramway.proxy.rlwy.net:57255/api/user/${user.id}`, {
+                    const res = await fetch(`http://tramway.proxy.rlwy.net/api/user/${user.id}`, {
                       method: 'PUT',
                       headers: {
                         'Content-Type': 'application/json'
@@ -952,7 +952,7 @@ const [showDeleteModal, setShowDeleteModal] = useState(false);
 
 
               try {
-                const res = await fetch('http://tramway.proxy.rlwy.net:57255/api/bookings', {
+                const res = await fetch('http://tramway.proxy.rlwy.net/api/bookings', {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify(bookingData)
@@ -1012,7 +1012,7 @@ const [showDeleteModal, setShowDeleteModal] = useState(false);
             }
 
             try {
-              const res = await fetch(`http://tramway.proxy.rlwy.net:57255/api/user/${user.id}`, {
+              const res = await fetch(`http://tramway.proxy.rlwy.net/api/user/${user.id}`, {
                 method: 'DELETE'
               });
 
@@ -1060,7 +1060,7 @@ const [showDeleteModal, setShowDeleteModal] = useState(false);
           className="bg-wedding-red hover:bg-wedding-red/90 text-white"
           onClick={async () => {
             try {
-              const res = await fetch('http://tramway.proxy.rlwy.net:57255/api/complete-booking', {
+              const res = await fetch('http://tramway.proxy.rlwy.net/api/complete-booking', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

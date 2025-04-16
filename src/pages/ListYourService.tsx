@@ -78,7 +78,7 @@ const ListYourService = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://tramway.proxy.rlwy.net:57255/api/register-service', {
+      const response = await fetch('http://tramway.proxy.rlwy.net/api/register-service', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

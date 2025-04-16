@@ -59,7 +59,7 @@ const VendorListing = () => {
   }, [location]);
 
   useEffect(() => {
-    fetch('http://tramway.proxy.rlwy.net:57255/api/vendor-listings')
+    fetch('http://tramway.proxy.rlwy.net/api/vendor-listings')
       .then(res => res.json())
       .then(data => {
         setVendors(data);
